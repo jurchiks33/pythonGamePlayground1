@@ -1,18 +1,33 @@
 # #Guess the number game
-# import random
+import random
 
-# guessesTaken = 0
+guessesTaken = 0
 
-metro_areas = [
-    ('Tokyo', 'JP', 36.933, (35.689722, 139.691667)), #
-    ('Delhi NCR', 'IN', 21.935, (28.613889, 77.208889)),
-    ('Mexico City', 'MX', 20.142, (19.433333, -99.133333)),
+print('Hello! My name is guessAI and what is your name?')
+myName = input()
 
-    ('New York-Newark', 'US', 20.104, (40.808611, -74.020386)),
-    ('Sao Paulo', 'BR', 19.649, (-23.547778, -46.635833)),
-]
-print('{:15} | {:^9} | {:^9}'.format('', 'lat.', 'long.'))
-fmt = '{:15} | {:9.4f} | {:9.4f}'
-for name, cc, pop, (latitude, longitude) in metro_areas: #
-    if longitude <= 0: #
-        print(fmt.format(name, latitude, longitude))
+number = random.radinat(1, 100)
+print('Alrighty,' + myName + ', Want to guess number i am thinkig?, its between 1 and 100.')
+
+for guessesTaken in range(6):
+    print('Take a guess.')
+    guess = input()
+    guess = int(guess)
+
+    if guess < number:
+        print('Ammmmm too low.')
+    
+    if guess > number:
+        print('Hold your horses, its too high!')
+
+    if guess == number:
+        break
+
+if guess == number:
+    guessesTaken = str(guessesTaken + 1)
+    print('Guessantastic job,' + myName + 'You guessed my number in' + 
+          guessesTaken + 'guesses!')
+
+if guess !=number:
+    number = str(number)
+    print('Ahhhh  nop. The number i was thinking of was' + number + '.')
