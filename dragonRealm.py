@@ -15,3 +15,8 @@ def chooseCave():
 
     return cave
 
+def checkCave(chosenCave):
+    print('You approach the cave...')
+    time.sleep(2)
+    print('It is dark and spooky...')
+    
