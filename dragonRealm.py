@@ -23,3 +23,11 @@ def checkCave(chosenCave):
     print('A large dragon jumps out in front of you! He opens his jaws and...')
     print()
     time.sleep(2)
+
+    friendlyCave = random.randint(1, 2)
+
+    if chosenCave == str(friendlyCave):
+        print('Gives you treasure!')
+    else:
+        print('Gobbles you down in one bite!')
+    
