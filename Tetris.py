@@ -35,3 +35,18 @@ TEXTSHADOWCOLOR = GRAY
 COLORS =(BLUE, GREEN, RED, YELLOW)
 LIGHTCOLORS =(LIGHTBLUE, LIGHTGREEN, LIGHTRED, LIGHTYELLOW)
 assert len(COLORS) == len(LIGHTCOLORS)
+
+TEMPLATEWIDTH  = 5
+TEMPLATEHEIGHT = 5
+
+S_SHAPE_TEMPLATE = [['.....',
+                     '.....',
+                     '..00.',
+                     '.00..',
+                     '.....'],
+                     ['.....',
+                      '..0..',
+                      '..00.',
+                      '...0.',
+                      '.....']]
+
